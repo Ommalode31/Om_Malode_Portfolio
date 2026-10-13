@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Om Malode | Portfolio</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <style>
+
+.skill-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease;
+}
+
+.skill-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    box-shadow: 0 0 35px rgba(34, 211, 238, 0.15);
+}
+
+</style>
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+
+
+
+<body class="bg-white text-black">
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="bg-black sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-5">
+
+        <!-- Logo -->
+        <a href="#home"
+           class="text-2xl md:text-4xl font-bold text-[#00E5FF] drop-shadow-[0_0_10px_#00E5FF]">
+            Om Malode.
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex gap-8 text-lg">
+            <a href="#home" class="text-sky-300 hover:text-white transition">Home</a>
+            <a href="#about" class="text-sky-300 hover:text-white transition">About</a>
+            <a href="#skills" class="text-sky-300 hover:text-white transition">Skills</a>
+            <a href="#projects" class="text-sky-300 hover:text-white transition">Projects</a>
+            <a href="#contact" class="text-sky-300 hover:text-white transition">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+            id="menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            class="md:hidden text-cyan-400 text-3xl focus:outline-none">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-cyan-400/30 px-6 pb-5">
+        <div class="flex flex-col gap-4 pt-4 text-lg">
+            <a href="#home" class="mobile-link text-sky-300 hover:text-white transition">Home</a>
+            <a href="#about" class="mobile-link text-sky-300 hover:text-white transition">About</a>
+            <a href="#skills" class="mobile-link text-sky-300 hover:text-white transition">Skills</a>
+            <a href="#projects" class="mobile-link text-sky-300 hover:text-white transition">Projects</a>
+            <a href="#contact" class="mobile-link text-sky-300 hover:text-white transition">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="relative min-h-screen">
+
+
+        <!-- Background -->
+
+        <img
+            src="bg 2.jpg"
+            alt="Background"
+            class="absolute inset-0 w-full h-full object-cover">
+
+
+        <!-- Overlay -->
+
+        <div class="absolute inset-0 bg-black/50"></div>
+
+
+        <!-- Hero Content -->
+
+        <div
+            class="relative z-10 min-h-screen flex flex-col justify-center px-8 md:px-40 text-white">
+
+
+            <p class="text-2xl md:text-3xl mb-2">
+
+                Hello, I'm
+
+            </p>
+
+
+            <h1 class="text-6xl md:text-8xl font-bold text-cyan-400">
+
+                Om Malode
+
+            </h1>
+
+
+            <h2 class="text-2xl md:text-4xl mt-5">
+                 And I'm a
+                  <span id="role-text" class="text-cyan-400 font-semibold"></span>
+                  <span class="text-cyan-400 animate-pulse">|</span>
+            </h2>
+
+
+            <!-- Availability Badge -->
+
+            <div class="mt-10">
+                  <span class="inline-flex items-center gap-3 px-5 py-3 bg-cyan-400/20 border border-cyan-400 rounded-full text-cyan-300">
+
+                      <!-- Green Status Dot -->
+
+                        <span class="w-3 h-3 bg-green-400 rounded-full 
+                                 animate-pulse shadow-[0_0_10px_#4ade80]">
+                         </span>
+
+                          Available for New Opportunities
+
+                     </span>
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="mt-8 flex flex-wrap gap-5">
+
+                <a
+                    href="#contact"
+                    class="px-6 py-3 bg-cyan-400 text-black font-semibold rounded-lg hover:bg-cyan-300 transition">
+
+                    Contact Me
+
+                </a>
+
+
+                <a
+                    href="#projects"
+                    class="px-6 py-3 border border-cyan-400 text-cyan-300 rounded-lg hover:bg-cyan-400 hover:text-black transition">
+
+                    View Projects
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <section id="about" class="py-20 bg-white">
+
+
+<!-- Heading -->
+<div class="text-center mb-16">
+
+    <h2 class="text-5xl font-bold">
+        About Me
+    </h2>
+
+    <div class="flex items-center justify-center mt-4 gap-3">
+
+        <div class="w-16 h-[2px] bg-black"></div>
+
+        <span class="text-blue-600 font-semibold text-xl">
+            Who I Am
+        </span>
+
+        <div class="w-16 h-[2px] bg-black"></div>
+
+    </div>
+
+</div>
+
+
+<!-- About Content -->
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+
+    <!-- Image -->
+    <div class="flex justify-center">
+
+        <img
+            src="protfolio.jpeg"
+            alt="Om Malode"
+            class="w-[350px] h-[420px] rounded-xl object-cover shadow-xl">
+
+    </div>
+
+
+    <!-- About Text -->
+    <div>
+
+        <h3 class="text-3xl md:text-4xl font-bold">
+              I'm Om Malode and I'm a
+             <span id="about-role" class="text-blue-600"></span>
+        </h3>
+
+
+        <p class="mt-6 text-lg text-gray-700 leading-8">
+
+            I am a passionate Software Developer with a strong foundation
+            in Java Full Stack Development and a keen interest in
+            Artificial Intelligence.
+
+            I enjoy building scalable, responsive and user-friendly
+            applications while solving real-world problems through
+            technology.
+
+            I have hands-on experience with Java, Spring Boot, JavaScript,
+            React, SQL, MySQL and modern web technologies. I also have an
+            interest in AI, LLMs, RAG and AI-powered applications.
+
+            I am continuously learning and improving my skills, and I am
+            always excited to work on challenging projects that help me
+            grow as a developer.
+        </p>
+
+
+       <!-- Download CV Button -->
+<a
+    href="./Om_Malode_Resume (2).pdf"
+    download
+    target="_blank"
+    class="inline-flex items-center mt-8 px-6 py-3
+           bg-black text-white rounded-lg
+           hover:bg-blue-600 transition duration-300">
+
+   
+    Download CV
+
+</a>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+
+
+    <!-- ================= SKILLS SECTION ================= -->
+
+    <section id="skills" class="bg-[#020b18] py-24 px-6">
+
+        <div class="max-w-7xl mx-auto">
+
+
+            <!-- Section Heading -->
+
+            <div class="text-center mb-16">
+
+                <h2 class="text-4xl md:text-5xl font-bold text-white">
+
+                    Skills &
+
+                    <span class="text-cyan-400">
+
+                        Technologies
+
+                    </span>
+
+                </h2>
+
+
+                <p class="text-gray-400 text-lg mt-4">
+
+                    Technologies and tools I use to build modern web experiences
+
+                </p>
+
+            </div>
+
+
+
+            <!-- Skills Grid -->
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+
+                <!-- ================= FRONTEND ================= -->
+
+                <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+
+                    <!-- Heading -->
+
+                    <div class="flex items-center gap-5 mb-7">
+
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-3xl">
+
+                            &lt;/&gt;
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold text-white">
+
+                                Frontend
+
+                            </h3>
+
+
+                            <p class="text-gray-400 mt-1">
+
+                                Building beautiful user interfaces
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Skills -->
+
+                    <div class="flex flex-wrap gap-3">
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            Next.js
+
+                        </span>
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            React.js
+
+                        </span>
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            HTML5
+
+                        </span>
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            CSS3
+
+                        </span>
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            JavaScript
+
+                        </span>
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            Tailwind CSS
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+                <!-- ================= BACKEND & APIs ================= -->
+
+    <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+    <!-- Heading -->
+
+    <div class="flex items-center gap-5 mb-7">
+
+        <div
+            class="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-3xl">
+
+            ⚙
+
+        </div>
+
+        <div>
+
+            <h3 class="text-2xl font-bold text-white">
+
+                Backend & APIs
+
+            </h3>
+
+            <p class="text-gray-400 mt-1">
+
+                Building backend services and APIs
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Backend Skills -->
+
+    <div class="flex flex-wrap gap-3">
+
+        <span
+            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+            Node.js
+
+        </span>
+
+
+        <span
+            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+            Express.js
+
+        </span>
+
+
+        <span
+            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+            REST API
+
+        </span>
+
+    </div>
+
+</div>
+
+
+
+                <!-- ================= PROGRAMMING ================= -->
+
+                <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+                    <div class="flex items-center gap-5 mb-7">
+
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-3xl">
+
+                            &lt;/&gt;
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold text-white">
+
+                                Programming
+
+                            </h3>
+
+
+                            <p class="text-gray-400 mt-1">
+
+                                Building application logic
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex flex-wrap gap-3">
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            Java
+
+                        </span>
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            JavaScript
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+                
+                <!-- ================= AI & INTEGRATIONS ================= -->
+
+              <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+    <!-- Heading -->
+
+    <div class="flex items-center gap-5 mb-7">
+
+      <div
+    class="w-14 h-14 flex items-center justify-center 
+    rounded-xl bg-blue-500/10 text-blue-500 text-3xl">
+
+    ✦
+
+</div>
+
+
+        <div>
+
+            <h3 class="text-2xl font-bold text-white">
+
+                AI & Integrations
+
+            </h3>
+
+
+            <p class="text-gray-400 mt-1">
+
+                Integrating AI-powered features and services
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI & Integration Skills -->
+
+    <div class="flex flex-wrap gap-3">
+
+
+        <span
+            class="px-5 py-3 rounded-xl 
+            border border-cyan-400/25 text-white 
+            hover:bg-cyan-400 hover:text-black 
+            hover:scale-105 transition">
+
+            OpenAI
+
+        </span>
+
+
+        <span
+            class="px-5 py-3 rounded-xl 
+            border border-cyan-400/25 text-white 
+            hover:bg-cyan-400 hover:text-black 
+            hover:scale-105 transition">
+
+            Google Gemini
+
+        </span>
+
+
+        <span
+            class="px-5 py-3 rounded-xl 
+            border border-cyan-400/25 text-white 
+            hover:bg-cyan-400 hover:text-black 
+            hover:scale-105 transition">
+
+            REST API
+
+        </span>
+
+
+    </div>
+
+</div>
+
+
+                <!-- ================= DATABASE ================= -->
+
+                <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+                    <!-- Heading -->
+
+                    <div class="flex items-center gap-5 mb-7">
+
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-3xl">
+
+                            🗄
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold text-white">
+
+                                Database
+
+                            </h3>
+
+
+                            <p class="text-gray-400 mt-1">
+
+                                Managing data efficiently
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Database Skills -->
+
+                    <div class="flex flex-wrap gap-3">
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            MongoDB
+
+                        </span>
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            MySQL
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= VERSION CONTROL ================= -->
+
+                <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+                    <!-- Heading -->
+
+                    <div class="flex items-center gap-5 mb-7">
+
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-3xl">
+
+                            ⑂
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold text-white">
+
+                                Version Control
+
+                            </h3>
+
+
+                            <p class="text-gray-400 mt-1">
+
+                                Code collaboration & versioning
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Version Control Skills -->
+
+                    <div class="flex flex-wrap gap-3">
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            Git
+
+                        </span>
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            GitHub
+
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ================= TOOLS ================= -->
+
+                <div 
+                   class="skill-card opacity-0 translate-y-10
+                   bg-[#061323] border border-cyan-400/25 rounded-2xl p-8
+                   hover:border-cyan-400/60
+                   hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
+                   hover:-translate-y-2
+                   transition-all duration-500">
+
+                    <div class="flex items-center gap-5 mb-7">
+
+                        <div
+                            class="w-14 h-14 flex items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-400 text-3xl">
+
+                            ⚙
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold text-white">
+
+                                Tools
+
+                            </h3>
+
+
+                            <p class="text-gray-400 mt-1">
+
+                                Essential development tools
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex flex-wrap gap-3">
+
+
+                        <span
+                            class="px-5 py-3 rounded-xl border border-cyan-400/25 text-white hover:bg-cyan-400 hover:text-black hover:scale-105 transition">
+
+                            VS Code
+
+                        </span>
+
+
+                    </div> 
+
+                    
+
+                </div>
+
+
+            </div>
+
+            <div class="text-center mt-14">
+
+                     <p class="text-lg md:text-xl text-gray-400">
+
+                               Always learning, exploring new technologies, and building
+                        <span class="text-cyan-400 font-semibold">
+                             innovative digital experiences.
+                        </span>
+
+                    </p>
+                     <div class="w-24 h-1 bg-blue-500 mx-auto mt-5 rounded-full"></div>
+
+                    </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS SECTION ================= -->
+
+    <section id="projects" class="py-20 bg-gray-100">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+
+            <div class="text-center mb-14">
+
+                <h2 class="text-5xl font-bold">
+
+                    Featured Projects
+
+                </h2>
+
+
+                <p class="mt-4 text-gray-600 text-lg">
+
+                    A showcase of my recent work and side projects
+
+                </p>
+
+            </div>
+
+
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+                <!-- ================= PROJECT 1 : SMARTATTEND ================= -->
+
+<div
+    class="bg-white rounded-xl overflow-hidden shadow-lg
+    hover:-translate-y-3 hover:shadow-2xl
+    transition-all duration-500">
+
+
+<!-- Project Image -->
+<div class="h-48 bg-gray-200 overflow-hidden">
+
+    <img
+        src="smartimg.jpeg"
+        alt="SmartAttend Project"
+        class="w-full h-full object-cover
+        hover:scale-105 transition-transform duration-500">
+
+</div>
+
+
+<!-- Project Content -->
+<div class="p-6">
+
+    <h3 class="text-2xl font-bold">
+        SmartAttend
+    </h3>
+
+
+    <p class="mt-3 text-gray-600 leading-7">
+
+        A smart attendance management system designed to
+        simplify and streamline attendance tracking and
+        management through a modern web interface.
+
+    </p>
+
+
+    <!-- Tech Stack -->
+    <div class="flex flex-wrap gap-2 mt-5">
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            Java
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            Spring Boot
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            JavaScript
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            MySQL
+        </span>
+
+    </div>
+
+
+    <!-- Buttons -->
+    <div class="flex gap-4 mt-6">
+
+        <a
+            href="https://smartattend-ommalode31s-projects.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 rounded-lg bg-blue-600
+            text-white font-semibold
+            hover:bg-blue-700 hover:scale-105
+            transition-all duration-300">
+
+            Live Demo
+
+        </a>
+
+
+        <a
+            href="https://github.com/Ommalode31/SmartAttend"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 rounded-lg bg-black
+            text-white font-semibold
+            hover:bg-gray-800 hover:scale-105
+            transition-all duration-300">
+
+            GitHub
+
+        </a>
+
+    </div>
+
+</div>
+
+
+</div>
+
+           <!-- ================= PROJECT 2 : HR RESUME SCREENING AI AGENT ================= -->
+
+<div
+    class="bg-white rounded-xl overflow-hidden shadow-lg
+    hover:-translate-y-3 hover:shadow-2xl
+    transition-all duration-500">
+
+
+<!-- Project Image -->
+<div class="h-48 bg-gray-200 overflow-hidden">
+
+    <img
+        src="aiimg.jpeg"
+        alt="HR Resume Screening AI Agent"
+        class="w-full h-full object-cover
+        hover:scale-105 transition-transform duration-500">
+
+</div>
+
+
+<!-- Project Content -->
+<div class="p-6">
+
+    <h3 class="text-2xl font-bold">
+        HR Resume Screening AI Agent
+    </h3>
+
+
+    <p class="mt-3 text-gray-600 leading-7">
+
+        An AI-powered resume screening application designed
+        to analyze resumes, extract relevant information,
+        and assist in identifying suitable candidates more
+        efficiently.
+
+    </p>
+
+
+    <!-- Tech Stack -->
+    <div class="flex flex-wrap gap-2 mt-5">
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            Python
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            AI
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            LLM
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            Streamlit
+        </span>
+
+    </div>
+
+
+    <!-- Buttons -->
+    <div class="flex gap-4 mt-6">
+
+        <a
+            href="https://hr-ai-agents-agyyrnmd5stcrpql2dxvrn.streamlit.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 rounded-lg bg-blue-600
+            text-white font-semibold
+            hover:bg-blue-700 hover:scale-105
+            transition-all duration-300">
+
+            Live Demo
+
+        </a>
+
+
+        <a
+            href="https://github.com/Ommalode31/hr-ai-agents"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 rounded-lg bg-black
+            text-white font-semibold
+            hover:bg-gray-800 hover:scale-105
+            transition-all duration-300">
+
+            GitHub
+
+        </a>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+             <!-- ================= PROJECT 3 : PERSONAL PORTFOLIO ================= -->
+
+<div
+    class="bg-white rounded-xl overflow-hidden shadow-lg
+    hover:-translate-y-3 hover:shadow-2xl
+    transition-all duration-500">
+
+
+<!-- Project Image -->
+<div class="h-48 bg-gray-200 overflow-hidden">
+
+    <img
+        src="protimg.jpeg"
+        alt="Personal Portfolio Website"
+        class="w-full h-full object-cover
+        hover:scale-105 transition-transform duration-500">
+
+</div>
+
+
+<!-- Project Content -->
+<div class="p-6">
+
+    <h3 class="text-2xl font-bold">
+        Personal Portfolio Website
+    </h3>
+
+
+    <p class="mt-3 text-gray-600 leading-7">
+
+        A modern and responsive personal portfolio website
+        designed to showcase my skills, projects, experience
+        and professional profile with a clean and interactive
+        user experience.
+
+    </p>
+
+
+    <!-- Tech Stack -->
+    <div class="flex flex-wrap gap-2 mt-5">
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            HTML5
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            Tailwind CSS
+        </span>
+
+        <span class="px-3 py-1 rounded-full bg-gray-100 text-sm">
+            JavaScript
+        </span>
+
+    </div>
+
+</div>
+
+
+</div>
+      
+
+
+               
+
+            </div>
+
+            <!-- ================= GET IN TOUCH ================= -->
+
+<div class="w-full text-center mt-28 mb-20">
+
+    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-cyan-400">
+        Get In Touch
+    </h2>
+
+    <p class="mt-5 text-l md:text-xl text-gray-700">
+        Have a project in mind? Let's work together!
+    </p>
+
+</div>  
+   
+</div>
+
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+<section id="contact" class="py-20 bg-white text-black">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <!-- Heading -->
+        <div class="text-center mb-16">
+
+            <h2 class="text-4xl md:text-5xl font-bold">
+                Contact Me
+            </h2>
+
+            <div class="flex items-center justify-center mt-4 gap-3">
+
+                <div class="w-16 h-[2px] bg-black"></div>
+
+                <span class="text-cyan-600 font-semibold text-xl">
+                    Get In Touch
+                </span>
+
+                <div class="w-16 h-[2px] bg-black"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Contact Content -->
+        <div class="grid md:grid-cols-2 gap-12">
+
+           <!-- Left Side: Contact Information -->
+
+<div>
+
+    <h3 class="text-2xl font-bold mb-4">
+        Get in Touch
+    </h3>
+
+    <p class="text-gray-700 text-lg leading-8 mb-8">
+        If you are interested in working together, feel free to contact me.
+        I am always open to discussing new opportunities and projects.
+    </p>
+
+    <!-- Name -->
+    <div class="flex items-center gap-8 mb-7">
+
+        <div class="w-8 flex justify-center text-3xl text-cyan-500">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+            <h4 class="text-xl font-medium text-black">
+                Name
+            </h4>
+
+            <p class="text-xl text-gray-800">
+                Om Malode
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Address -->
+    <div class="flex items-center gap-8 mb-7">
+
+        <div class="w-8 flex justify-center text-3xl text-cyan-500">
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div>
+            <h4 class="text-xl font-medium text-black">
+                Address
+            </h4>
+
+            <p class="text-xl text-gray-800">
+                Hyderabad, India
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Email -->
+    <div class="flex items-center gap-8">
+
+        <div class="w-8 flex justify-center text-3xl text-cyan-500">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div>
+            <h4 class="text-xl font-medium text-black">
+                Email
+            </h4>
+
+            <a href="mailto:ommalode560@gmail.com"
+               class="text-xl text-gray-800 hover:text-cyan-500 transition">
+                ommalode560@gmail.com
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- Right Side: Contact Form -->
+            <div>
+
+                <h3 class="text-2xl font-bold mb-5">
+                    Message Me
+                </h3>
+
+                <form action="https://formsubmit.co/ommalode560@gmail.com"
+                      method="POST"
+                      class="space-y-5">
+
+                    <!-- Email Subject -->
+                    <input type="hidden"
+                           name="_subject"
+                           value="New Message from Portfolio Website">
+
+                    <!-- Disable Captcha if desired -->
+                    <input type="hidden"
+                           name="_captcha"
+                           value="false">
+
+                    <!-- Name and Email -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Your Name"
+                            required
+                            class="w-full px-5 py-4 border border-gray-300 rounded-lg outline-none focus:border-cyan-500 transition">
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your Email"
+                            required
+                            class="w-full px-5 py-4 border border-gray-300 rounded-lg outline-none focus:border-cyan-500 transition">
+
+                    </div>
+
+                    <!-- Subject -->
+                    <input
+                        type="text"
+                        name="subject"
+                        placeholder="Subject"
+                        required
+                        class="w-full px-5 py-4 border border-gray-300 rounded-lg outline-none focus:border-cyan-500 transition">
+
+                    <!-- Message -->
+                    <textarea
+                        name="message"
+                        rows="5"
+                        placeholder="Write your message..."
+                        required
+                        class="w-full px-5 py-4 border border-gray-300 rounded-lg outline-none focus:border-cyan-500 transition resize-none"></textarea>
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        class="px-7 py-3 border-2 border-cyan-500 text-cyan-600 font-semibold rounded-lg hover:bg-cyan-500 hover:text-black transition duration-300">
+
+                        Send Message →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+    <!-- Font Awesome Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<footer
+  id="footer"
+  class="relative isolate overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-blue-950 px-6 pb-6 pt-16 text-white"
+>
+  <!-- Background Effects -->
+  <div
+    class="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full bg-cyan-300/20 blur-[100px]"
+  ></div>
+
+  <div
+    class="pointer-events-none absolute -bottom-20 -right-10 -z-10 h-72 w-72 rounded-full bg-indigo-400/30 blur-[100px]"
+  ></div>
+
+  <!-- Footer Content -->
+  <div class="mx-auto max-w-5xl text-center">
+
+   <!-- Typing Animation Heading -->
+
+<div class="mb-8 mt-4 text-center">
+  <h2 class="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+    <span class="text-white">Let's </span>
+    <span
+      id="typing-text"
+      class="text-cyan-300"
+    ></span>
+    <span class="animate-pulse text-cyan-300">|</span>
+  </h2>
+</div>
+
+  
+    <!-- Social Media Icons -->
+    <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
+
+      <!-- GitHub -->
+      <a
+        href="https://github.com/Ommalode31"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/10 text-lg text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/70 hover:bg-white/25 hover:shadow-cyan-300/20"
+      >
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        href="https://www.linkedin.com/in/om-malode-3915a8236"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/10 text-lg text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/70 hover:bg-white/25 hover:shadow-cyan-300/20"
+      >
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a
+        href="https://instagram.com/ommalode_31"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/10 text-lg text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/70 hover:bg-white/25 hover:shadow-cyan-300/20"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <!-- Email -->
+      <a
+        href="mailto:ommalode560@gmail.com"
+        aria-label="Email"
+        class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/10 text-lg text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/70 hover:bg-white/25 hover:shadow-cyan-300/20"
+      >
+        <i class="fa-regular fa-envelope"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/7058522232"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+        class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/10 text-lg text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-white/70 hover:bg-white/25 hover:shadow-cyan-300/20"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+    </div>
+
+    <!-- Divider -->
+    <div
+      class="my-11 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"
+    ></div>
+
+    <!-- Copyright -->
+    <div
+      class="flex flex-col items-center justify-between gap-3 text-xs text-blue-100/80 sm:flex-row sm:text-sm"
+    >
+      <p>
+        © <span id="copyright-year"></span>
+        <span class="font-semibold text-white">Om Malode</span>.
+        All rights reserved.
+      </p>
+
+      <p>
+        Designed & built with
+        <span class="text-pink-300">♥️</span>
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  document.getElementById("copyright-year").textContent =
+    new Date().getFullYear();
+</script>
+
+    <!-- Typing Animation JavaScript -->
+<script>
+    const footerText = "connect with me on";
+    const footerElement = document.getElementById("typing-text");
+
+    let footerIndex = 0;
+    let footerDeleting = false;
+
+    function typeFooterText() {
+
+        if (!footerElement) return;
+
+        if (!footerDeleting) {
+
+            footerElement.textContent =
+                footerText.substring(0, footerIndex + 1);
+
+            footerIndex++;
+
+            if (footerIndex === footerText.length) {
+                footerDeleting = true;
+                setTimeout(typeFooterText, 1800);
+                return;
+            }
+
+            setTimeout(typeFooterText, 90);
+
+        } else {
+
+            footerElement.textContent =
+                footerText.substring(0, footerIndex - 1);
+
+            footerIndex--;
+
+            if (footerIndex === 0) {
+                footerDeleting = false;
+                setTimeout(typeFooterText, 400);
+                return;
+            }
+
+            setTimeout(typeFooterText, 50);
+        }
+    }
+
+    typeFooterText();
+</script>
+
+    <script>
+    const roles = [
+        "Software Development Engineer",
+        "Java Full Stack Developer"
+    ];
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const roleText = document.getElementById("role-text");
+
+    function typeRole() {
+        const currentRole = roles[roleIndex];
+
+        if (!isDeleting) {
+            roleText.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === currentRole.length) {
+                isDeleting = true;
+                setTimeout(typeRole, 1800);
+                return;
+            }
+
+            setTimeout(typeRole, 90);
+
+        } else {
+            roleText.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+
+            setTimeout(typeRole, 50);
+        }
+    }
+
+    typeRole();
+</script>
+
+<script>
+    const aboutRoles = [
+        "Java Full Stack Developer",
+        "Software Developer Engineer"
+    ];
+
+    let aboutRoleIndex = 0;
+    let aboutCharIndex = 0;
+    let aboutDeleting = false;
+
+    function typeAboutRole() {
+        const roleElement = document.getElementById("about-role");
+        const currentRole = aboutRoles[aboutRoleIndex];
+
+        if (!aboutDeleting) {
+            roleElement.textContent = currentRole.substring(0, aboutCharIndex + 1);
+            aboutCharIndex++;
+
+            if (aboutCharIndex === currentRole.length) {
+                aboutDeleting = true;
+                setTimeout(typeAboutRole, 1500);
+                return;
+            }
+        } else {
+            roleElement.textContent = currentRole.substring(0, aboutCharIndex - 1);
+            aboutCharIndex--;
+
+            if (aboutCharIndex === 0) {
+                aboutDeleting = false;
+                aboutRoleIndex = (aboutRoleIndex + 1) % aboutRoles.length;
+            }
+        }
+
+        setTimeout(typeAboutRole, aboutDeleting ? 50 : 100);
+    }
+
+    typeAboutRole();
+</script>
+
+<script>
+
+const skillCards = document.querySelectorAll(".skill-card");
+
+const skillObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                skillObserver.unobserve(entry.target);
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+skillCards.forEach((card) => {
+    skillObserver.observe(card);
+});
+
+</script>
+
+<script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    menuBtn.addEventListener("click", () => {
+        const isOpening = mobileMenu.classList.contains("hidden");
+
+        mobileMenu.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", String(isOpening));
+
+        menuIcon.classList.toggle("fa-bars", !isOpening);
+        menuIcon.classList.toggle("fa-xmark", isOpening);
+
+        menuBtn.setAttribute(
+            "aria-label",
+            isOpening ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
+
+    document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+</script>
+
+</body>
+
+</html>
